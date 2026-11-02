@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Verification Required — Security Check</title>
+  <meta name="description" content="Training simulation page for a phishing-detection research prototype. No credentials are collected.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Roboto, Arial, sans-serif; background: #f3f4f6; color: #202938; }
+    .top { background: #7f1d1d; color: white; padding: 13px 20px; font-weight: 700; }
+    main { max-width: 760px; margin: 48px auto; padding: 0 18px; }
+    .notice { background: #fff7ed; border: 1px solid #fdba74; color: #9a3412; padding: 14px 16px; border-radius: 8px; }
+    .panel { background: white; margin-top: 20px; padding: 30px; border: 1px solid #d1d5db; border-radius: 12px; box-shadow: 0 8px 24px #11182712; }
+    h1 { margin-top: 0; font-size: 27px; }
+    label { display: block; margin: 16px 0 6px; font-weight: 600; }
+    input { width: 100%; padding: 12px; border: 1px solid #9ca3af; border-radius: 6px; }
+    button { margin-top: 20px; padding: 12px 18px; background: #991b1b; color: white; border: 0; border-radius: 6px; font-weight: 700; cursor: pointer; }
+    .links { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 14px; }
+    a { color: #1d4ed8; }
+    .illustration { display: block; width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px; margin: 18px 0; }
+    footer { color: #6b7280; font-size: 13px; margin: 24px 0; }
+    .demo { font-size: 12px; color: #6b7280; margin-top: 14px; }
+  </style>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+</head>
+<body>
+  <div class="top">SECURITY NOTICE · ACCOUNT REVIEW</div>
+  <main>
+    <div class="notice"><strong>Unusual activity detected.</strong> This demonstration page imitates urgency cues sometimes used in phishing messages.</div>
+    <section class="panel">
+      <h1>Verify your account to avoid temporary restriction</h1>
+      <p>Our automated security check has flagged this demonstration account for review.</p>
+      <img class="illustration"
+           src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800"
+           alt="Abstract cybersecurity illustration">
+      <form id="demo-form">
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="demo@example.test" autocomplete="off">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Not collected" autocomplete="off">
+        <button type="submit">Continue to verification</button>
+      </form>
+      <p class="demo">Training simulation only. The form does not transmit or store anything.</p>
+      <div class="links">
+        <a href="https://example.com/security">Security centre</a>
+        <a href="https://example.org/account">Account help</a>
+        <a href="https://www.iana.org/domains/reserved">Verification policy</a>
+      </div>
+    </section>
+    <footer>Research demonstration page · No real organisation is represented · No information is collected.</footer>
+  </main>
+  <script>
+    document.getElementById('demo-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Demo only: no information was sent or stored.');
+    });
+  </script>
+</body>
+</html>
